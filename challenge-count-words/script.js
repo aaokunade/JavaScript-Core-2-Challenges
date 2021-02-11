@@ -1,6 +1,5 @@
 function calculateWords(chapterOfABook) {
   const wordCount = {};
-
   // // Write your code in here
     if(chapterOfABook.trim().length === 0){
       return wordCount; 
@@ -8,13 +7,12 @@ function calculateWords(chapterOfABook) {
      let arr = chapterOfABook.split(" ");
      arr.forEach(function wordSearch(str){
        if(str in wordCount){
-       wordCount[str] +=1;
+        wordCount[str] +=1;
        } else {
         wordCount[str] = 1;
         }
       //  console.log(`${str}: ${wordCount["str"]}`);
       })
-    
      return wordCount;
 }
 
