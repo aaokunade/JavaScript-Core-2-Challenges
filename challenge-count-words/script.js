@@ -1,10 +1,23 @@
 function calculateWords(chapterOfABook) {
   const wordCount = {};
 
-  // Write your code in here
-
-  return wordCount;
+  // // Write your code in here
+    if(chapterOfABook.trim().length === 0){
+      return wordCount; 
+    }
+     let arr = chapterOfABook.split(" ");
+     arr.forEach(function wordSearch(str){
+       if(str in wordCount){
+       wordCount[str] +=1;
+       } else {
+        wordCount[str] = 1;
+        }
+      //  console.log(`${str}: ${wordCount["str"]}`);
+      })
+    
+     return wordCount;
 }
+
 
 calculateWords(getDraculaChapterOne());
 
